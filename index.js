@@ -10,7 +10,9 @@ app.use(cors())
 app.use(express.json())
 app.use("/users", UserRouter)
 app.use("/books", BookRouter)
-
+app.get("/",(req,res)=>{
+    res.send("<h1>Welcome To My Server</h1>")
+})
 
 app.listen(process.env.port, async()=> {
     try {
