@@ -10,7 +10,11 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use("/users", UserRouter)
+
 app.use("/posts", PostRouter)
+// =======
+app.use("/books", BookRouter)
+// >>>>>>> 9173d4a0994f16c314113d9d8ae6ebe3fe43b249
 app.get("/",(req,res)=>{
     res.send("<h1>Welcome To My Server</h1>")
 })
@@ -25,4 +29,7 @@ app.listen(process.env.port, async()=> {
     }
    
 })
+// <<<<<<< HEAD
  
+// =======
+// >>>>>>> 9173d4a0994f16c314113d9d8ae6ebe3fe43b249
