@@ -1,8 +1,6 @@
 var jwt = require('jsonwebtoken');
 const {blacklist} = require("../blacklist")
 
-
-
  const auth = (req,res,next) => {
     const token = req.headers.authorization?.split(" ")[1]
     if(token){
@@ -23,8 +21,7 @@ const {blacklist} = require("../blacklist")
       }
     }else{
       res.json({msg:"Login First"})
-    }
-    
+    }   
  }
 
  module.exports = {
